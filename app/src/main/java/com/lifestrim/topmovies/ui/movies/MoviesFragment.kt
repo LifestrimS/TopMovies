@@ -38,7 +38,7 @@ class MoviesFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        viewModel.films.observe(viewLifecycleOwner, Observer {
+        viewModel.movies.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Resource.Status.SUCCESS -> {
                     progress_bar.visibility = View.GONE

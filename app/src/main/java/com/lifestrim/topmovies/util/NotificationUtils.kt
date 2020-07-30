@@ -15,7 +15,7 @@ import java.util.*
 class NotificationUtils {
 
 
-    fun setDateTimeForNotification(view: View) {
+    fun setDateTimeForNotification(view: View, movieTitle: String) {
         val mDialogView = LayoutInflater.from(view.context).inflate(R.layout.data_time_dialog, null)
         val mBuilder = AlertDialog.Builder(view.context)
             .setView(mDialogView)
@@ -40,12 +40,12 @@ class NotificationUtils {
             )
             val dateLong = calendar.timeInMillis
 
-            setNotification(view, dateLong)
+            setNotification(view, dateLong, movieTitle)
             mAlertDialog.dismiss()
         }
     }
 
-    private fun setNotification(view: View, timeInMilliSeconds: Long) {
+    private fun setNotification(view: View, timeInMilliSeconds: Long, movieTitle: String) {
 
         if (timeInMilliSeconds > 0) {
 
@@ -53,6 +53,8 @@ class NotificationUtils {
             val alarmIntent = Intent(view.context.applicationContext, AlarmReceiver::class.java)
 
             alarmIntent.putExtra("timestamp", timeInMilliSeconds)
+            alarmIntent.putExtra("movieTitle", movieTitle)
+
 
             val calendar = Calendar.getInstance()
             calendar.timeInMillis = timeInMilliSeconds

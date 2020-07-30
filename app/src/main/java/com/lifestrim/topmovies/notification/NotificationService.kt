@@ -39,14 +39,15 @@ class NotificationService : IntentService("NotificationService") {
 
         createChannel()
         var timestamp: Long = 0
+        var message = "You wanted to watch this movie: "
         if (intent != null && intent.extras != null) {
             timestamp = intent.extras!!.getLong("timestamp")
+            message += intent.extras!!.getString("movieTitle").toString()
         }
 
         if (timestamp > 0) {
 
             val title = "How about some movies?"
-            val message = "It's time to watch the movie!"
 
             val calendar = Calendar.getInstance()
             calendar.timeInMillis = timestamp

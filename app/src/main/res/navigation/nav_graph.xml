@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/filmsFragment">
+    app:startDestination="@id/moviesFragment">
 
     <fragment
-        android:id="@+id/filmsFragment"
+        android:id="@+id/moviesFragment"
         android:name="com.lifestrim.topmovies.ui.movies.MoviesFragment"
         android:label="Films"
         tools:layout="@layout/movies_fragment"/>

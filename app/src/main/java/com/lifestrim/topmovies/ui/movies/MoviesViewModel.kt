@@ -9,5 +9,5 @@ class MoviesViewModel @ViewModelInject constructor(
     repository: MovieRepository
 ) : ViewModel() {
 
-    val films = repository.getMovies()
+    val movies = repository.getMovies()
 }

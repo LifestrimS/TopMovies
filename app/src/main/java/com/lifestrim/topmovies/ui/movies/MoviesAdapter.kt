@@ -47,7 +47,7 @@ class MovieViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         this.movie = item
 
         view.tv_schedule_viewing.setOnClickListener {
-            NotificationUtils().setDateTimeForNotification(view)
+            NotificationUtils().setDateTimeForNotification(view, item.title)
         }
 
         view.title.text = item.title
