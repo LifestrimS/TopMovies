@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">TopMovies</string>
+
+    <string name="overview_test">Miles Morales is juggling his life between being a high school
+        student and being a spider-man. When Wilson Kingpin Fisk uses a super collider,
+        other from across the Spider-Verse are transported to this dimensions.</string>
+    <string name="schedule_viewing">Schedule viewing</string>
+
+    <string name="test_ready">ready</string>
+
+    <string name="notification_channel_description">To remind you of a viewing.</string>
+    <string name="time_date_dialog_title">Time and date of viewing</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="tmdblogo">tmdbLogo</string>
 </resources>
