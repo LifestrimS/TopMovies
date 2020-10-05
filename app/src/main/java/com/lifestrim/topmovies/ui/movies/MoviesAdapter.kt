@@ -50,6 +50,10 @@ class MovieViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
             NotificationUtils().setDateTimeForNotification(view, item.title)
         }
 
+        view.title.setOnClickListener {
+            //TODO: Navigate to details
+        }
+
         view.title.text = item.title
         view.popularity.text = item.popularity.toString()
         view.release_date.text = DateConverter().getDate(item.release_date)

@@ -1,6 +1,9 @@
 <resources>
+<!--    rootView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or-->
+<!--    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION-->
+
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -8,6 +11,11 @@
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="android:navigationBarColor">#4A01B4E4</item>
+        <item name="android:statusBarColor">#5E6200EE</item>
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <!--        <item name="android:windowTranslucentNavigation">true</item>-->
     </style>
 
     <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
